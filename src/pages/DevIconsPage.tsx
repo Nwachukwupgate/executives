@@ -1,6 +1,6 @@
+import { iconNames } from "@/common/icons";
 import AppLogo from "@/common/icons/AppLogo";
 import IconComponent from "@/common/icons/Icon";
-import { iconNames } from "@/common/icons/pack";
 import CenterOnLgScreen from "@/common/utilities/CenterLgScreen";
 import { appToast } from "@/utilities/appToast";
 import { Typography } from "@mui/material";

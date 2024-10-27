@@ -1,6 +1,7 @@
 import AppErrorBoundary from "@/common/errorComponents/AppErrorBoundary";
 import WelcomeLoader from "@/common/loaders/WelcomeLoader";
 import Layout from "@/layout/Layout";
+import DevIconsPage from "@/pages/DevIconsPage";
 import { lazy } from "react";
 import {
   createBrowserRouter,
@@ -39,6 +40,10 @@ const unAuthenticatedOnlyRoute: ExtendedRouteObject[] = [
     element: <Login />,
     anonymousOnly: true,
     // errorElement: <ErrorBoundary />,
+  },
+  {
+    path: "/dev-x-icons",
+    element: <DevIconsPage />,
   },
 ];
 
