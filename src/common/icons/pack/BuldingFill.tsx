@@ -1,0 +1,16 @@
+import SVGIcon, { SVGIconProps } from "../SVGIcon";
+
+type BuildingFillProps = Partial<SVGIconProps>;
+
+const BuildingFill: React.FC<BuildingFillProps> = ({ ...props }) => {
+  return (
+    <SVGIcon width="21" height="16" viewBox="0 0 21 16" fill="none" {...props}>
+      <path
+        d="M8.83333 0.161621V2.04495L10.5 3.15329V1.82829H18.8333V14.3283H14.6667V15.995H20.5V0.161621H8.83333ZM6.75 2.66162L0.5 6.82829V15.995H13V6.82829L6.75 2.66162ZM12.1667 3.49495V4.26995L13.5083 5.16162H13.8333V3.49495H12.1667ZM15.5 3.49495V5.16162H17.1667V3.49495H15.5ZM6.75 4.74495L11.3333 7.66162V14.3283H8.83333V9.32829H4.66667V14.3283H2.16667V7.66162L6.75 4.74495ZM15.5 6.82829V8.49495H17.1667V6.82829H15.5ZM15.5 10.1616V11.8283H17.1667V10.1616H15.5Z"
+        fill={props.fill ? props.fill : "#fff"}
+      />
+    </SVGIcon>
+  );
+};
+
+export default BuildingFill;

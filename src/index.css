@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+
+  @font-face {
+    font-family: "Roobert TWHINT";
+    font-style: normal;
+    font-weight: 600;
+    src:
+      url("./assets/fonts/Roobert_TWHINT_Bold.ttf") format("ttf"),
+      url("./assets/fonts/Roobert_TWHINT_Bold.woff") format("woff");
+  }
+
+  body {
+    @apply bg-[rgba(244,240,235,1)] font-inter text-sm font-normal text-black;
+  }
+}
