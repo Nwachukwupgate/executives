@@ -14,6 +14,10 @@ export const lightTheme = responsiveFontSizes(
       primary: {
         main: "#0A3347",
       },
+      secondary: {
+        main: "#E2B682",
+        contrastText: "#fff",
+      },
       success: {
         main: "#E2B682",
       },
@@ -127,12 +131,13 @@ export function customizeTheme(theme?: ThemeOptions) {
         },
         styleOverrides: {
           root: ({}) => ({
-            position: "static",
-            transform: "none",
-            fontWeight: "500",
+            // position: "static",
+            // transform: "none",
+            fontWeight: "600",
             textTransform: "capitalize",
-            fontSize: "14px",
-            color: "#111213",
+            fontSize: "20px",
+            color: "#8C8E9A",
+            fontFamily: "Roobert TWHINT",
           }),
         },
       },
@@ -150,10 +155,19 @@ export function customizeTheme(theme?: ThemeOptions) {
       },
       MuiTextField: {
         defaultProps: {
-          variant: "outlined",
+          variant: "filled",
         },
         variants: [],
-        styleOverrides: {},
+      },
+      MuiFilledInput: {
+        defaultProps: {
+          disableUnderline: true,
+        },
+        styleOverrides: {
+          root: ({}) => ({
+            borderRadius: "6px",
+          }),
+        },
       },
       MuiInputBase: {
         styleOverrides: {
