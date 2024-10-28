@@ -49,7 +49,7 @@ export function AppThemeProvider(props: Partial<ThemeProviderProps>) {
           palatteKeyColor
         ];
 
-        console.log(`${palatteKey}--${palatteKeyColor}--${value}`);
+        // console.log(`${palatteKey}--${palatteKeyColor}--${value}`);
         document.documentElement.style.setProperty(
           `--color-${palatteKey}-${palatteKeyColor}`,
           value
