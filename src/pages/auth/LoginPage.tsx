@@ -14,7 +14,7 @@ const LoginPage: React.FC<LoginPageProps> = ({}) => {
             <AppLogo />
           </div>
         </section>
-        <section className="px-4 py-12 mx-auto w-[96%] md:px-8 lg:px-16">
+        <section className="px-4 py-12 mx-auto w-[96%] max-w-[600px] xl:max-w-[660px] md:px-8 lg:px-16">
           <div className="py-6">
             <Typography variant="h2" sx={{ fontWeight: "bold" }}>
               Login
