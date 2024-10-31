@@ -16,6 +16,7 @@ type ExtendedRouteObject = RouteObject & {
 };
 
 const Login = lazy(() => import("@/pages/auth/LoginPage"));
+const Gallery = lazy(() => import("@/pages/gallery/Gallery"));
 
 const protectedRoutes: ExtendedRouteObject[] = [
   {
@@ -26,10 +27,14 @@ const protectedRoutes: ExtendedRouteObject[] = [
     protected: true,
     children: [
       // {
-      //   path: routes.securityRoutes.DASHBOARD,
+      //   path: routes..DASHBOARD,
       //   element: <SecurityDashboard />,
       //   index: true,
       // },
+      {
+        path: routes.parentRoutes.GALLERY,
+        element: <Gallery />,
+      },
     ],
   },
 ];

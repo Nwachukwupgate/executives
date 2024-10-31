@@ -19,15 +19,22 @@ const SideNavLink: React.FC<props> = ({ link, icon, text, iconSize }) => {
       to={link}
       className={({ isActive }) =>
         isActive
-          ? `${defaultStyles} bg-primaryColorLight text-primaryColor`
-          : `${defaultStyles} text-primaryTextHighlight hover:bg-primaryColorDark`
+          ? `${defaultStyles} font-[600] bg-primaryColorDark text-primaryTextHighlight capitalize`
+          : `${defaultStyles} text-primaryTextHighlight capitalize hover:bg-[#5B5B5B1F]`
       }
     >
       <span>
         <IconComponent
           name={icon}
-          size={iconSize ? iconSize : 20}
-          fill={isActive ? "#008CDB" : "#E6F4FB"}
+          size={iconSize ? iconSize : 22}
+          {...(isActive
+            ? {
+                fill: "white",
+                strokeWidth: "0",
+              }
+            : {
+                stroke: "white",
+              })}
         />
       </span>
       <span className="ml-4">{text}</span>

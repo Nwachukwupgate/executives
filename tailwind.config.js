@@ -23,6 +23,11 @@ export default {
 				primaryColorDark: "var(--color-primary-dark)",
 				primaryTextHighlight: "var(--color-primary-contrastText)", // default text color for blue
 
+				secondaryColor: "var(--color-secondary-main)",
+				secondaryColorLight: "var(--color-secondary-light)",
+				secondaryColorDark: "var(--color-secondary-dark)",
+				secondaryTextHighlight: "var(--color-secondary-contrastText)", // default text color for blue
+
 				successColor: "var(--color-success-main)",
 				successColorLight: "var(--color-success-light)",
 				successColorDark: "var(--color-success-dark)",

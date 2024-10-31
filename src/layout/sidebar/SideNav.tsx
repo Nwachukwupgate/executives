@@ -7,9 +7,9 @@ const SideNav: React.FC<SideNavProps> = ({}) => {
   return (
     <aside
       aria-label="sidebar"
-      className={`fixed top-0 z-[100] h-full w-[300px] overflow-auto bg-primaryColor px-[20px] py-[55px] transition-[left] ${isActive ? "left-0" : "-left-[300px]"} lg:!left-0`}
+      className={`fixed top-0 z-[100] h-full w-[288px] overflow-auto bg-primaryColor px-[20px] py-[55px] transition-[left] ${isActive ? "left-0" : "-left-[300px]"} lg:!left-0`}
     >
-      <div className="flex justify-center">
+      <div className="flex mb-4 justify-center">
         <AppLogo />
       </div>
       <Navs />

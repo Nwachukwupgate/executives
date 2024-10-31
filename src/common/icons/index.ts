@@ -45,6 +45,7 @@ import ManWithTie from "./pack/ManWithTie";
 import MapOutline from "./pack/MapOutline";
 import MicrophoneOutline from "./pack/MicrophoneOutline";
 import OptionsIcon from "./pack/OptionsIcon";
+import OutilineProfileOne from "./pack/OutilineProfileOne";
 import PaperPlaneIcon from "./pack/PaperPlaneIcon";
 import PartiallyFullCircle from "./pack/PartiallyFullCircle";
 import Pedestrian from "./pack/Pedestrian";
@@ -57,6 +58,8 @@ import PhoneOutline from "./pack/PhoneOutline";
 import PlayButtonBlue from "./pack/PlayButtonBlue";
 import PlusIcon from "./pack/PlusIcon";
 import RemoveUserIcon from "./pack/RemoveUserIcon";
+import ReportOutline from "./pack/ReportOutline";
+import RoundEdgeocument from "./pack/RoundEdgeocument";
 import SecurityOfficer from "./pack/SecurityOfficer";
 import ServiceR from "./pack/ServiceR";
 import ServiceRequest from "./pack/ServiceRequest";
@@ -67,6 +70,7 @@ import Spanner from "./pack/Spanner";
 import SquareExclamation from "./pack/SquareExclamation";
 import StatDocument from "./pack/StatDocument";
 import Surveillance from "./pack/Survellance";
+import ThreeUsers from "./pack/ThreeUsers";
 import UnlockIcon from "./pack/Unlock";
 import UserGroupTwo from "./pack/UserGroupTwo";
 import UserOnPad from "./pack/UserOnPad";
@@ -75,6 +79,7 @@ import UserWithClock from "./pack/UserWithClock";
 import VehicleIcon from "./pack/VehicleIcon";
 import ViewLog from "./pack/ViewLog";
 import visitorIcon from "./pack/VisitorIcon";
+import WalletOutline from "./pack/WalletOutline";
 import WorkerFill from "./pack/WorkerFill";
 
 const iconPack = {
@@ -156,6 +161,11 @@ const iconPack = {
   Caution,
   DoorLock,
   UserOnPad,
+  WalletOutline,
+  RoundEdgeocument,
+  OutilineProfileOne,
+  ReportOutline,
+  ThreeUsers,
 };
 
 export { iconPack };

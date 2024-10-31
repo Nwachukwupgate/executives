@@ -8,35 +8,34 @@ const normalBar: {
   iconSize?: number;
 }[] = [
   {
-    icon: "DoorEntrance",
-    text: "dashboard",
-    link: "/",
-    iconSize: 17,
-  },
-  {
-    icon: "AccessIcon",
-    text: "Facilities",
+    icon: "OutilineProfileOne",
+    text: "Profile",
     link: "/",
   },
   {
-    icon: "ArrowNorthEast",
-    text: "Manage Users",
-    link: "/",
+    icon: "RoundEdgeocument",
+    text: "Project",
+    link: "/12",
   },
   {
-    icon: "BinFill",
-    text: "Facility Unit",
-    link: "/",
+    icon: "ManInDocument",
+    text: "Contractor",
+    link: "/123",
   },
   {
-    icon: "ArrowNorthEast",
-    text: "Common Areas",
-    link: "/",
+    icon: "WalletOutline",
+    text: "Supplier Payment",
+    link: "/124",
   },
   {
-    icon: "AngleLeft",
-    text: "Communication",
-    link: "/",
+    icon: "ThreeUsers",
+    text: "StoreKeeper",
+    link: "/15",
+  },
+  {
+    icon: "ReportOutline",
+    text: "Report",
+    link: "/21",
   },
 ];
 
