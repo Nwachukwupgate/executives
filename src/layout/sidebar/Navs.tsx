@@ -26,7 +26,7 @@ const normalBar: {
   {
     icon: "ManInDocument",
     text: "Contractor",
-    link: "/123",
+    link: routes.parentRoutes.CONTRACTOR,
   },
   {
     icon: "WalletOutline",
