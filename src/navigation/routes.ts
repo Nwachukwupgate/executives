@@ -5,6 +5,7 @@ export const parentRoutes = Object.freeze({
   FORGOT_PASSWORD_PAGE: "/forgot-password",
   REGISTER_PAGE: "/sign-up",
   GALLERY: "/gallery",
+  PROJECT: "/project",
 });
 
 export default Object.freeze({

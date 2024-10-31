@@ -10,17 +10,17 @@ export default function TableUI<T>({ table }: props<T>) {
   return (
     <table className="" width="100%" id="data__table">
       <thead className="">
-        <tr className="!rounded-2xl bg-[#F9F9F9]">
+        <tr className=" bg-primaryColor text-white">
           {table.getFlatHeaders().map((header) => {
             return (
               <th
-                className={`${""} px-6 py-4 text-left text-[14px] font-medium capitalize [line-height:22px] [&:last-child]:rounded-tl-lg [&:nth-child(1)]:rounded-tl-lg`}
+                className={`${""} px-6 py-4 text-left text-[14px] font-medium capitalize [line-height:22px`}
                 key={header.id}
                 colSpan={header.colSpan}
               >
                 {header.isPlaceholder ? null : (
                   <div
-                    className={`flex items-center text-[#42526D] ${
+                    className={`flex items-center  ${
                       header.column.getCanSort()
                         ? "cursor-pointer select-none"
                         : ""
@@ -49,7 +49,7 @@ export default function TableUI<T>({ table }: props<T>) {
           return (
             <tr
               key={row.id}
-              className={`border-b border-b-[#EBF2FA] ${row.getIsSelected() && "!border-b-4 !border-white bg-primaryColorLight"}`}
+              className={`border-b border-b-[#EBF2FA] ${row.getIsSelected() && "!border-b-4 !border-white bg-[#F4F0EB]"}`}
             >
               {row.getVisibleCells().map((cell) => {
                 return (

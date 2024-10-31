@@ -30,7 +30,6 @@ const SideNavLink: React.FC<props> = ({ link, icon, text, iconSize }) => {
           {...(isActive
             ? {
                 fill: "white",
-                strokeWidth: "0",
               }
             : {
                 stroke: "white",

@@ -22,6 +22,7 @@ import CoordinateOutline from "./pack/Coordinates";
 import DoorEntrance from "./pack/DoorEntrance";
 import DoorExit from "./pack/DoorExit";
 import DoorLock from "./pack/DoorLockIcon";
+import Download from "./pack/Download";
 import EditIcon from "./pack/EditIcon";
 import EditSquared from "./pack/EditSquared";
 import Emergency from "./pack/Emergency";
@@ -46,6 +47,7 @@ import MapOutline from "./pack/MapOutline";
 import MicrophoneOutline from "./pack/MicrophoneOutline";
 import OptionsIcon from "./pack/OptionsIcon";
 import OutilineProfileOne from "./pack/OutilineProfileOne";
+import OutlineCamera from "./pack/OutlineCamera";
 import PaperPlaneIcon from "./pack/PaperPlaneIcon";
 import PartiallyFullCircle from "./pack/PartiallyFullCircle";
 import Pedestrian from "./pack/Pedestrian";
@@ -166,6 +168,8 @@ const iconPack = {
   OutilineProfileOne,
   ReportOutline,
   ThreeUsers,
+  Download,
+  OutlineCamera,
 };
 
 export { iconPack };

@@ -2,7 +2,6 @@ import AppErrorBoundary from "@/common/errorComponents/AppErrorBoundary";
 import WelcomeLoader from "@/common/loaders/WelcomeLoader";
 import Layout from "@/layout/Layout";
 import DevIconsPage from "@/pages/DevIconsPage";
-import ProfilePage from "@/pages/user/ProfilePage";
 import { lazy } from "react";
 import {
   createBrowserRouter,
@@ -18,6 +17,8 @@ type ExtendedRouteObject = RouteObject & {
 
 const Login = lazy(() => import("@/pages/auth/LoginPage"));
 const Gallery = lazy(() => import("@/pages/gallery/Gallery"));
+const ProfilePage = lazy(() => import("@/pages/user/ProfilePage"));
+const ProjectPage = lazy(() => import("@/pages/project/ProjectPage"));
 
 const protectedRoutes: ExtendedRouteObject[] = [
   {
@@ -35,6 +36,10 @@ const protectedRoutes: ExtendedRouteObject[] = [
       {
         path: routes.parentRoutes.GALLERY,
         element: <Gallery />,
+      },
+      {
+        path: routes.parentRoutes.PROJECT,
+        element: <ProjectPage />,
       },
     ],
   },

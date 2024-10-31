@@ -16,10 +16,10 @@ const normalBar: {
   {
     icon: "RoundEdgeocument",
     text: "Project",
-    link: "/12",
+    link: routes.parentRoutes.PROJECT,
   },
   {
-    icon: "CameraIcon",
+    icon: "OutlineCamera",
     text: "Gallery",
     link: routes.parentRoutes.GALLERY,
   },

@@ -32,10 +32,11 @@ export default function SelectTable<T>({
       {
         id: "select",
         header: ({ table }) => (
-          <>
+          <div className="bg-white ml-1">
             <Checkbox
               sx={{
-                padding: "0 0 0 4px",
+                padding: "0 0 0 0px",
+                margin: 0,
               }}
               {...{
                 checked: table.getIsAllRowsSelected(),
@@ -44,7 +45,7 @@ export default function SelectTable<T>({
                 color: "success",
               }}
             />
-          </>
+          </div>
         ),
         cell: ({ row }) => (
           <div className="px-1">
@@ -64,11 +65,11 @@ export default function SelectTable<T>({
         ),
       },
     ],
-    [],
+    []
   );
 
   const table = useReactTable({
-    columns: mergeColumn ? [...checkCol, ...columns] : columns,
+    columns: mergeColumn ? ([...checkCol, ...columns] as any) : columns,
     data,
     state: {
       rowSelection: selected,
@@ -78,8 +79,10 @@ export default function SelectTable<T>({
     onRowSelectionChange: setSelected,
   });
   return (
-    <div className={`${className}`}>
-      <TableUI<T> table={table} />
+    <div className={`${className} w-full overflow-x-auto`}>
+      <div className="min-w-full w-fit">
+        <TableUI<T> table={table} />
+      </div>
     </div>
   );
 }

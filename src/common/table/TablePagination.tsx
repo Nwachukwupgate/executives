@@ -7,8 +7,8 @@ type props = {
   onChange: (event: React.ChangeEvent<unknown>, page: number) => void;
 };
 
-const Pagination = styled(Pcomp)<PaginationProps>(({ theme }) => ({
-  background: theme.palette.primary.light,
+const Pagination = styled(Pcomp)<PaginationProps>(({}) => ({
+  background: "#F4F0EB",
   boxShadow: "0px 0px 4px rgba(0,0,0,0.2)",
   borderRadius: "10px",
 
