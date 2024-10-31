@@ -5,7 +5,7 @@ import { matchPath, NavLink, useLocation } from "react-router-dom";
 type props = navLinkProps;
 
 const SideNavLink: React.FC<props> = ({ link, icon, text, iconSize }) => {
-  const defaultStyles = "flex items-center px-4 rounded-lg py-[0.85rem] my-2 ";
+  const defaultStyles = "flex items-center px-4 rounded-lg py-[0.85rem] my-2";
   const { pathname } = useLocation();
   const isActive = matchPath(
     {

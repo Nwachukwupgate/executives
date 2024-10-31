@@ -1,4 +1,5 @@
 import { TIconPack } from "@/common/icons";
+import routes from "@/navigation/routes";
 import SideNavLink from "./SideNavLink";
 
 const normalBar: {
@@ -16,6 +17,11 @@ const normalBar: {
     icon: "RoundEdgeocument",
     text: "Project",
     link: "/12",
+  },
+  {
+    icon: "CameraIcon",
+    text: "Gallery",
+    link: routes.parentRoutes.GALLERY,
   },
   {
     icon: "ManInDocument",
@@ -41,11 +47,11 @@ const normalBar: {
 
 const Navs: React.FC = () => {
   return (
-    <>
+    <div className="grid gap-6">
       {...normalBar.map((props) => {
         return <SideNavLink key={props.text} {...props} />;
       })}
-    </>
+    </div>
   );
 };
 

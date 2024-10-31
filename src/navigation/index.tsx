@@ -2,6 +2,7 @@ import AppErrorBoundary from "@/common/errorComponents/AppErrorBoundary";
 import WelcomeLoader from "@/common/loaders/WelcomeLoader";
 import Layout from "@/layout/Layout";
 import DevIconsPage from "@/pages/DevIconsPage";
+import ProfilePage from "@/pages/user/ProfilePage";
 import { lazy } from "react";
 import {
   createBrowserRouter,
@@ -26,11 +27,11 @@ const protectedRoutes: ExtendedRouteObject[] = [
     errorElement: <AppErrorBoundary />,
     protected: true,
     children: [
-      // {
-      //   path: routes..DASHBOARD,
-      //   element: <SecurityDashboard />,
-      //   index: true,
-      // },
+      {
+        path: routes.parentRoutes.HOME,
+        element: <ProfilePage />,
+        index: true,
+      },
       {
         path: routes.parentRoutes.GALLERY,
         element: <Gallery />,
