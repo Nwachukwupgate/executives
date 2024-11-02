@@ -20,6 +20,11 @@ const Gallery = lazy(() => import("@/pages/gallery/Gallery"));
 const ProfilePage = lazy(() => import("@/pages/user/ProfilePage"));
 const ProjectPage = lazy(() => import("@/pages/project/ProjectPage"));
 const ContractorsPage = lazy(() => import("@/pages/project/Contractors"));
+const SupplierPaymentPage = lazy(
+  () => import("@/pages/project/SupplierPayment")
+);
+const StoreKeeperPage = lazy(() => import("@/pages/project/StoreKeeper"));
+const ReportPage = lazy(() => import("@/pages/project/Report"));
 
 const protectedRoutes: ExtendedRouteObject[] = [
   {
@@ -45,6 +50,18 @@ const protectedRoutes: ExtendedRouteObject[] = [
       {
         path: routes.parentRoutes.CONTRACTOR,
         element: <ContractorsPage />,
+      },
+      {
+        path: routes.parentRoutes.SUPPLIER_PAYMENT,
+        element: <SupplierPaymentPage />,
+      },
+      {
+        path: routes.parentRoutes.STORE_KEEPER,
+        element: <StoreKeeperPage />,
+      },
+      {
+        path: routes.parentRoutes.REPORT,
+        element: <ReportPage />,
       },
     ],
   },

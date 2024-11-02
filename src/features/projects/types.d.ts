@@ -15,3 +15,30 @@ type contractType = {
   amount: string;
   address: string;
 };
+
+type storeKeeperType = {
+  materialName: string;
+  stokeKeeperName: string;
+  orderDate: string;
+  suppliersName: string;
+  quantityOrdered: string;
+};
+
+type supplierType = {
+  id: string;
+  fullName: string;
+  orderDate: string;
+  materialName: string;
+  totalPrice: string;
+  depositedAmount: string;
+  balance: string;
+};
+
+type reportType = {
+  weeklyEngagement: string;
+  achievement: string;
+  challenges: string;
+  comment: string;
+  grade: string;
+  suggestion: string;
+};

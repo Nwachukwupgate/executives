@@ -95,6 +95,7 @@ export function customizeTheme(theme?: ThemeOptions) {
         styleOverrides: {
           root: ({}) => ({
             height: "42px",
+            minWidth: "120px",
           }),
         },
         variants: [

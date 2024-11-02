@@ -31,17 +31,17 @@ const normalBar: {
   {
     icon: "WalletOutline",
     text: "Supplier Payment",
-    link: "/124",
+    link: routes.parentRoutes.SUPPLIER_PAYMENT,
   },
   {
     icon: "ThreeUsers",
     text: "StoreKeeper",
-    link: "/15",
+    link: routes.parentRoutes.STORE_KEEPER,
   },
   {
     icon: "ReportOutline",
     text: "Report",
-    link: "/21",
+    link: routes.parentRoutes.REPORT,
   },
 ];
 
