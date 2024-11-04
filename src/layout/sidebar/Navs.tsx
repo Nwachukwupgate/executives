@@ -19,6 +19,11 @@ const normalBar: {
     link: routes.parentRoutes.PROJECT,
   },
   {
+    icon: "ThreeUsers",
+    text: "Staff",
+    link: routes.parentRoutes.Employee,
+  },
+  {
     icon: "OutlineCamera",
     text: "Gallery",
     link: routes.parentRoutes.GALLERY,

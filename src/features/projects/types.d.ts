@@ -42,3 +42,15 @@ type reportType = {
   grade: string;
   suggestion: string;
 };
+
+type employeeType = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  department: string;
+  actions?: any;
+  role?: string;
+  details?: string; // Adjust based on your requirements
+  add?: string; // Adjust based on your requirements
+};

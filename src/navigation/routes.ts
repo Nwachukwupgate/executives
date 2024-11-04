@@ -10,6 +10,7 @@ export const parentRoutes = Object.freeze({
   STORE_KEEPER: "/store-keeper",
   SUPPLIER_PAYMENT: "/supplier-payment",
   REPORT: "/report",
+  Employee: "/employee"
 });
 
 export default Object.freeze({

@@ -41,7 +41,7 @@ const Profile: React.FC<ProfileProps> = ({}) => {
           </div>
           <div className="pt-8 pb-2 md:py-1">
             <h2 className="font-Roobert capitalize">lorem me</h2>
-            <p>Project Manager</p>
+            <p>ICT Manager</p>
           </div>
         </div>
 
