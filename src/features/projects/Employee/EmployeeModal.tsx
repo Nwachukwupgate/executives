@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 interface ModalProps {
   type: string;
   employeeId: string;
@@ -7,7 +5,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75">
