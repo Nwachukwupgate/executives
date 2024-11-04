@@ -1,9 +1,7 @@
-// src/components/EmployeeList/IconButton.tsx
-
 import React from "react";
 
 interface IconButtonProps {
-  iconName: string;
+  iconName: "details" | "edit" | "add"; // restrict iconName to these values
   onClick: () => void;
 }
 
@@ -41,11 +39,7 @@ const IconButton: React.FC<IconButtonProps> = ({ iconName, onClick }) => {
     ),
   };
 
-  return (
-    <button onClick={onClick}>
-      {icons[iconName]}
-    </button>
-  );
+  return <button onClick={onClick}>{icons[iconName]}</button>;
 };
 
 export default IconButton;
