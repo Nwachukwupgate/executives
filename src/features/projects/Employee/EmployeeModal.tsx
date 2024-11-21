@@ -1,23 +1,58 @@
+import React from 'react';
+import { Modal as MuiModal, Box, Typography } from '@mui/material';
+import AddEmployees from './ModalType/AddDetails';
+import ViewDetails from './ModalType/ViewDetails';
+import CreateDetail from './ModalType/CreateDetail';
+
 interface ModalProps {
   type: string;
   employeeId: string;
   onClose: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
-  // const [show, setShow] = useState(false);
+const style = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  bgcolor: 'background.paper',
+  borderRadius: 2,
+  boxShadow: 24,
+  p: 4,
+  minWidth: 800,
+  maxHeight: '88vh', // Limit the modal's height
+  overflowY: 'auto', 
+};
 
+const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75">
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <h2 className="text-lg font-bold">Modal for {type}</h2>
-        <p>Employee ID: {employeeId}</p>
+    <MuiModal
+      open={true}
+      onClose={onClose}
+      aria-labelledby="modal-title"
+      aria-describedby="modal-description"
+    >
+      <Box sx={style}>
+        <Typography id="modal-title" variant="h6" component="h2" fontWeight="bold" gutterBottom>
+          Modal for {type}
+        </Typography>
+        {/* <Typography id="modal-description" variant="body1" gutterBottom>
+          Employee ID: {employeeId}
+        </Typography> */}
         {/* Add additional modal content based on the type */}
-        <button onClick={onClose} className="mt-4 bg-red-500 text-white px-4 py-2 rounded">
+        {type === 'add' && <AddEmployees />}
+        {type === 'details' && <ViewDetails />}
+        {type === 'edit' && <CreateDetail id={employeeId}/>}
+        {/* <Button
+          onClick={onClose}
+          variant="contained"
+          color="error"
+          sx={{ mt: 2 }}
+        >
           Close
-        </button>
-      </div>
-    </div>
+        </Button> */}
+      </Box>
+    </MuiModal>
   );
 };
 

@@ -30,8 +30,8 @@ const normalBar: {
   },
   {
     icon: "ManInDocument",
-    text: "Contractor",
-    link: routes.parentRoutes.CONTRACTOR,
+    text: "Create",
+    link: routes.parentRoutes.Create,
   },
   {
     icon: "WalletOutline",

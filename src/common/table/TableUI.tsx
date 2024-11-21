@@ -14,7 +14,7 @@ export default function TableUI<T>({ table }: props<T>) {
           {table.getFlatHeaders().map((header) => {
             return (
               <th
-                className={`${""} px-6 py-4 text-left text-[14px] font-medium capitalize [line-height:22px`}
+                className={`${""} whitespace-nowrap px-6 py-4 text-left text-[14px] font-medium capitalize [line-height:22px`}
                 key={header.id}
                 colSpan={header.colSpan}
               >
@@ -49,7 +49,7 @@ export default function TableUI<T>({ table }: props<T>) {
           return (
             <tr
               key={row.id}
-              className={`border-b border-b-[#EBF2FA] ${row.getIsSelected() && "!border-b-4 !border-white bg-[#F4F0EB]"}`}
+              className={`border-b whitespace-nowrap text-left border-b-[#EBF2FA] ${row.getIsSelected() && "!border-b-4 !border-white bg-[#F4F0EB]"}`}
             >
               {row.getVisibleCells().map((cell) => {
                 return (

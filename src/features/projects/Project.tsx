@@ -7,6 +7,7 @@ import TablePagination from "@/common/table/TablePagination";
 import AppMenuWrapper from "@/common/utilities/AppMenuWrapper";
 import { useState } from "react";
 import projectColumns from "./column/project.column";
+import { Button } from "@mui/material";
 
 const data: projectType[] = [
   {
@@ -15,6 +16,11 @@ const data: projectType[] = [
     location: "30 Walter carrignton street",
     name: "project",
     size: "large",
+    title: "GCC III",
+    status: "Completed",
+    tagline: "68Tar",
+    unitNumber: "18",
+    startDate: "08-10-22"
   },
   {
     deliveryDate: "12-04-2024T10:00:00",
@@ -22,6 +28,11 @@ const data: projectType[] = [
     location: "34 Walter carrignton street",
     name: "erc love",
     size: "medium",
+    title: "GCC III",
+    status: "Completed",
+    tagline: "68Tar",
+    unitNumber: "18",
+    startDate: "08-10-22"
   },
   {
     deliveryDate: "12-04-2024T10:00:00",
@@ -29,6 +40,11 @@ const data: projectType[] = [
     location: "Lekki toll gate3",
     name: "clean love",
     size: "medium",
+    title: "GCC III",
+    status: "Completed",
+    tagline: "68Tar",
+    unitNumber: "18",
+    startDate: "08-10-22"
   },
   {
     deliveryDate: "12-03-2024T10:00:00",
@@ -36,13 +52,27 @@ const data: projectType[] = [
     location: "30 Walter carrignton street",
     name: "project",
     size: "large",
+    title: "GCC III",
+    status: "Completed",
+    tagline: "68Tar",
+    unitNumber: "18",
+    startDate: "08-10-22"
   },
 ];
+
 type ProjectProps = {};
 const Project: React.FC<ProjectProps> = ({}) => {
   const [selected, setSelected] = useState({});
+  const [modalType, setModalType] = useState<string | null>(null);
+  const [employeeId, setEmployeeId] = useState<string | null>(null);
+  const [isCreateProjectModalOpen, setIsCreateProjectModalOpen] = useState(false); 
 
-  const columns = projectColumns();
+  const handleOpenModal = (id: string, type: string) => {
+    setEmployeeId(id);
+    setModalType(type);
+  };
+
+  const columns = projectColumns(handleOpenModal);
 
   return (
     <div>
@@ -59,7 +89,16 @@ const Project: React.FC<ProjectProps> = ({}) => {
           }
         ></AppMenuWrapper>
 
-        <Download />
+        <div className="flex items-center gap-4 justify-between">
+          <Button
+            className="font-bold w-40"
+            color="secondary"
+            onClick={() => setIsCreateProjectModalOpen(true)} // Open Create Employee modal
+          >
+            Create Project
+          </Button>
+        </div>
+        {/* <Download /> */}
       </div>
       <div className="pt-10">
         <SelectTable

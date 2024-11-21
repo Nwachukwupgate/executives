@@ -19,7 +19,7 @@ const Login = lazy(() => import("@/pages/auth/LoginPage"));
 const Gallery = lazy(() => import("@/pages/gallery/Gallery"));
 const ProfilePage = lazy(() => import("@/pages/user/ProfilePage"));
 const ProjectPage = lazy(() => import("@/pages/project/ProjectPage"));
-const ContractorsPage = lazy(() => import("@/pages/project/Contractors"));
+const CreatePage = lazy(() => import("@/pages/project/Create"));
 const SupplierPaymentPage = lazy(
   () => import("@/pages/project/SupplierPayment")
 );
@@ -54,8 +54,8 @@ const protectedRoutes: ExtendedRouteObject[] = [
         element: <EmployeePage />,
       },
       {
-        path: routes.parentRoutes.CONTRACTOR,
-        element: <ContractorsPage />,
+        path: routes.parentRoutes.Create,
+        element: <CreatePage />,
       },
       {
         path: routes.parentRoutes.SUPPLIER_PAYMENT,

@@ -7,7 +7,7 @@ const Contractors: React.FC<ContractorsProps> = ({}) => {
     <CenterOnLgScreen className="py-8">
       <div className="bg-white min-h-[84svh] rounded-lg p-5">
         <section>
-          <h1 className="font-bold text-xl py-2">Contractors</h1>
+          <h1 className="font-bold text-xl py-2">Employees</h1>
         </section>
 
         <div className="py-4">

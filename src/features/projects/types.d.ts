@@ -4,6 +4,12 @@ type projectType = {
   location: string;
   size: string;
   deliveryDate: string;
+  title: string,
+  status: string,
+  tagline: string,
+  unitNumber: string,
+  startDate: string,
+  actions?: any;
 };
 
 type contractType = {
