@@ -26,15 +26,15 @@ const projectColumns = (handleOpenModal: (id: string, type: string) => void) => 
       <div className="flex space-x-2">
         <IconButton
           iconName="details"
-          onClick={() => handleOpenModal(row.original.id, 'details')}
+          onClick={() => handleOpenModal(row.original.id, 'projectDetails')}
         />
         <IconButton
           iconName="edit"
-          onClick={() => handleOpenModal(row.original.id, 'edit')}
+          onClick={() => handleOpenModal(row.original.id, 'editProject')}
         />
         <IconButton
           iconName="add"
-          onClick={() => handleOpenModal(row.original.id, 'add')}
+          onClick={() => handleOpenModal(row.original.id, 'addProject')}
         />
       </div>
     ),

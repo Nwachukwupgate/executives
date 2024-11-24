@@ -1,4 +1,3 @@
-import Download from "@/common/icons/pack/Download";
 import FilterIcon from "@/common/icons/pack/FilterIcon";
 import SelectTable from "@/common/table/CheckBoxTable";
 import PaginationWrapper from "@/common/table/PaginationWrapper";
@@ -8,6 +7,8 @@ import AppMenuWrapper from "@/common/utilities/AppMenuWrapper";
 import { useState } from "react";
 import projectColumns from "./column/project.column";
 import { Button } from "@mui/material";
+import CreateProject from "./Project/CreateProject";
+import Modal from "./Project/ProjectModal";
 
 const data: projectType[] = [
   {
@@ -64,17 +65,19 @@ type ProjectProps = {};
 const Project: React.FC<ProjectProps> = ({}) => {
   const [selected, setSelected] = useState({});
   const [modalType, setModalType] = useState<string | null>(null);
-  const [employeeId, setEmployeeId] = useState<string | null>(null);
+  const [projectId, setprojectId] = useState<string | null>(null);
   const [isCreateProjectModalOpen, setIsCreateProjectModalOpen] = useState(false); 
 
   const handleOpenModal = (id: string, type: string) => {
-    setEmployeeId(id);
+    setprojectId(id);
     setModalType(type);
   };
 
   const columns = projectColumns(handleOpenModal);
 
   return (
+    // import Download from "@/common/icons/pack/Download";
+
     <div>
       <div className="flex w-full items-center gap-4 py-4 xl:basis-1/2 xl:justify-between">
         <AppMenuWrapper
@@ -117,6 +120,24 @@ const Project: React.FC<ProjectProps> = ({}) => {
           onChange={() => null}
         />
       </PaginationWrapper>
+
+      {isCreateProjectModalOpen && (
+          <CreateProject 
+            onClose={() => setIsCreateProjectModalOpen(false)} 
+          />
+      )}
+
+      {/* Modal Component */}
+      {modalType && projectId && (
+          <Modal
+            type={modalType}
+            employeeId={projectId}
+            onClose={() => {
+              setModalType(null);
+              setprojectId(null);
+            }}
+          />
+        )}
     </div>
   );
 };

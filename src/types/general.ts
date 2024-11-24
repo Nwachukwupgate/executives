@@ -99,3 +99,74 @@ export interface Employee {
   employee_careers: Career[];
   employee_academics: Academic[];
 }
+
+// Types for the project data structure
+export interface ProjectPhoto {
+  name: string;
+  file: string;
+}
+
+export interface ProjectLandmark {
+  name: string;
+  file: string;
+}
+
+export interface ProjectUnit {
+  id: number;
+  name: string;
+  additional_fee_component: string;
+  price: string;
+  initial_deposit: string;
+  photos?: {
+    name: string;
+    file: string;
+  }[]
+}
+
+export interface ProjectVideo {
+  name: string;
+  video_link: string;
+}
+
+export interface ProjectLandmarkPhoto {
+  name: string;
+  file: string;
+}
+
+export interface ProjectAmenity {
+  name: string;
+  file: string;
+}
+
+export interface FloorUnitProps {
+    units: ProjectUnit[];
+    viewModal: (unit: ProjectUnit) => void;
+    FloorUnitProps: string;
+    detailName: string;
+    detailSize: string;
+}[]
+
+export interface ProjectData {
+  name: string;
+  location: string;
+  project_size: string;
+  title: string;
+  delivery_date: string;
+  status: string;
+  project_photos: ProjectPhoto[];
+  floor_units: FloorUnitProps[];
+  project_videos: ProjectVideo[];
+  project_landmark_photos: ProjectLandmarkPhoto[];
+  project_amenities: ProjectAmenity[];
+}
+
+export interface ModalState {
+  showFModal: boolean;
+  showMedModal: boolean;
+  showKin: boolean;
+  showMedRecord: boolean;
+  amenities: boolean;
+  unitShow: boolean;
+  addUnit: boolean;
+  selectedUnit: ProjectUnit | null;
+}

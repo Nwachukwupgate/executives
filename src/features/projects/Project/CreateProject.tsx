@@ -25,7 +25,7 @@ interface ProjectForm {
 }
 
 interface CreateProjectProps {
-  open: boolean;
+//   open: boolean;
   onClose: () => void; // Close modal handler
 }
 
@@ -39,9 +39,11 @@ const style = {
   p: 4,
   borderRadius: 2,
   minWidth: 500,
+  maxHeight: '85vh', // Maximum height to fit within viewport
+  overflowY: 'auto',
 };
 
-const CreateProject: React.FC<CreateProjectProps> = ({ open, onClose }) => {
+const CreateProject: React.FC<CreateProjectProps> = ({ onClose }) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ProjectForm>();
 
   const onSubmit: SubmitHandler<ProjectForm> = (data) => {
@@ -51,7 +53,7 @@ const CreateProject: React.FC<CreateProjectProps> = ({ open, onClose }) => {
   };
 
   return (
-    <Modal open={open} onClose={onClose}>
+    <Modal open={true} onClose={onClose}>
       <Box sx={style}>
         <Typography variant="h6" textAlign="center" fontWeight="bold" mb={2}>
           Create Project
