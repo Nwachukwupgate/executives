@@ -7,7 +7,7 @@ export const parentRoutes = Object.freeze({
   GALLERY: "/gallery",
   PROJECT: "/project",
   Create: "/create",
-  STORE_KEEPER: "/store-keeper",
+  SUBSCRIBER: "/subscriber",
   SUPPLIER_PAYMENT: "/supplier-payment",
   REPORT: "/report",
   Employee: "/employee"

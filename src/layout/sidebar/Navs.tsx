@@ -40,8 +40,8 @@ const normalBar: {
   },
   {
     icon: "ThreeUsers",
-    text: "StoreKeeper",
-    link: routes.parentRoutes.STORE_KEEPER,
+    text: "Subscribers",
+    link: routes.parentRoutes.SUBSCRIBER,
   },
   {
     icon: "ReportOutline",

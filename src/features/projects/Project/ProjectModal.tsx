@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal as MuiModal, Box, Typography } from '@mui/material';
 import ViewDetails from './ModalType/ViewDetails';
+import CreateDetail from './ModalType/CreateDetail';
 
 
 interface ModalProps {
@@ -41,6 +42,7 @@ const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
         {/* Add additional modal content based on the type */}
         {/* {type === 'add' && <AddEmployees />} */}
         {type === 'projectDetails' && <ViewDetails />}
+        {type === 'editProject' && <CreateDetail id={employeeId} /> }
         {/* {type === 'edit' && <CreateDetail id={employeeId}/>} */}
         {/* <Button
           onClick={onClose}

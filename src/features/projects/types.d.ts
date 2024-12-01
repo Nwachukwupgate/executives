@@ -60,3 +60,15 @@ type employeeType = {
   details?: string; // Adjust based on your requirements
   add?: string; // Adjust based on your requirements
 };
+
+type subscriberType = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  otherNames: string;
+  email: string;
+  referralCode: string;
+  residentialAddress: string;
+  phone: string;
+  actions?: any;
+};

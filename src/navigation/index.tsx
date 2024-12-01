@@ -23,7 +23,7 @@ const CreatePage = lazy(() => import("@/pages/project/Create"));
 const SupplierPaymentPage = lazy(
   () => import("@/pages/project/SupplierPayment")
 );
-const StoreKeeperPage = lazy(() => import("@/pages/project/StoreKeeper"));
+const SubscriberPage = lazy(() => import("@/pages/project/Subscriber"));
 const ReportPage = lazy(() => import("@/pages/project/Report"));
 const EmployeePage = lazy(() => import("@/pages/project/Employee"));
 
@@ -62,8 +62,8 @@ const protectedRoutes: ExtendedRouteObject[] = [
         element: <SupplierPaymentPage />,
       },
       {
-        path: routes.parentRoutes.STORE_KEEPER,
-        element: <StoreKeeperPage />,
+        path: routes.parentRoutes.SUBSCRIBER,
+        element: <SubscriberPage />,
       },
       {
         path: routes.parentRoutes.REPORT,

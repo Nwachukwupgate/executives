@@ -1,7 +1,7 @@
 import React from "react";
 
 interface IconButtonProps {
-  iconName: "details" | "edit" | "add"; // restrict iconName to these values
+  iconName: "details" | "edit" | "add"; 
   onClick: () => void;
 }
 

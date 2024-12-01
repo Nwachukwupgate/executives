@@ -170,3 +170,14 @@ export interface ModalState {
   addUnit: boolean;
   selectedUnit: ProjectUnit | null;
 }
+
+export type SubscriberType = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  otherNames: string;
+  email: string;
+  referralCode: string;
+  residentialAddress: string;
+  phone: string;
+};
