@@ -13,8 +13,9 @@ const IconButton: React.FC<IconButtonProps> = ({ iconName, onClick }) => {
         onClick={onClick}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
+        fill="currentColor"
       >
-        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.244 0-9.75-4.506-9.75-10S6.756 2 12 2s9.75 4.506 9.75 10-4.506 10-9.75 10zm-.75-17h1.5v7.5h-1.5V5zm0 9h1.5v1.5h-1.5v-1.5z" />
+        <path d="M12 4.5C7.305 4.5 3.247 7.58 1.5 12c1.747 4.42 5.805 7.5 10.5 7.5s8.753-3.08 10.5-7.5C20.753 7.58 16.695 4.5 12 4.5zm0 11.25A3.75 3.75 0 1 1 12 9a3.75 3.75 0 0 1 0 7.5zm0-6A2.25 2.25 0 1 0 12 15a2.25 2.25 0 0 0 0-4.5z" />
       </svg>
     ),
     edit: (
@@ -23,8 +24,9 @@ const IconButton: React.FC<IconButtonProps> = ({ iconName, onClick }) => {
         onClick={onClick}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
+        fill="currentColor"
       >
-        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.244 0-9.75-4.506-9.75-10S6.756 2 12 2s9.75 4.506 9.75 10-4.506 10-9.75 10zm-1.5-17h3v3h-3V5zm0 4.5h3v3h-3v-3zm0 4.5h3v3h-3v-3z" />
+        <path d="M13.586 3.586a2 2 0 0 1 2.828 0l4 4a2 2 0 0 1 0 2.828l-9.193 9.193a1 1 0 0 1-.403.244l-5 1.667a1 1 0 0 1-1.26-1.26l1.667-5a1 1 0 0 1 .244-.403l9.193-9.193zM16 5l3 3-9.193 9.193-2.122-2.121L16 5zM4.707 19.293a1 1 0 0 0 1.414 1.414l-1.414-1.414z" />
       </svg>
     ),
     add: (
@@ -33,8 +35,9 @@ const IconButton: React.FC<IconButtonProps> = ({ iconName, onClick }) => {
         onClick={onClick}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
+        fill="currentColor"
       >
-        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.244 0-9.75-4.506-9.75-10S6.756 2 12 2s9.75 4.506 9.75 10-4.506 10-9.75 10zm-.75-17h1.5v7.5h-1.5V5zm0 9h1.5v1.5h-1.5v-1.5z" />
+        <path d="M12 2a1 1 0 0 1 1 1v8h8a1 1 0 1 1 0 2h-8v8a1 1 0 1 1-2 0v-8H3a1 1 0 1 1 0-2h8V3a1 1 0 0 1 1-1z" />
       </svg>
     ),
   };

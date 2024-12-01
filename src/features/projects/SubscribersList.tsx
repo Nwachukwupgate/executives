@@ -6,10 +6,10 @@ import TablePagination from "@/common/table/TablePagination";
 import AppMenuWrapper from "@/common/utilities/AppMenuWrapper";
 import { useState } from "react";
 import { Button } from "@mui/material";
-import CreateProject from "./Project/CreateProject";
-import Modal from "./Project/ProjectModal";
+import Modal from "./Subscriber/SubscriberModal";
 import { SubscriberType } from "@/types/general";
 import subscriberColumns from "./column/subscriber.column";
+import CreateSubscriber from "./Subscriber/CreateSubscriber";
 
 
 const data: SubscriberType[] = [
@@ -106,7 +106,7 @@ const SubscriberList: React.FC<SubscriberProps> = ({}) => {
       </PaginationWrapper>
 
       {isCreateSubscriberModalOpen && (
-          <CreateProject 
+          <CreateSubscriber 
             onClose={() => setIsCreateSubscriberModalOpen(false)} 
           />
       )}

@@ -181,3 +181,45 @@ export type SubscriberType = {
   residentialAddress: string;
   phone: string;
 };
+
+type SubscriberAttachment = {
+  id: number;
+  document_name: string;
+  file: string;
+};
+
+type SubscriberProject = {
+  id: number;
+  subscriber_id: number;
+  project: {
+    name: string;
+    title: string;
+  };
+};
+
+export type SubscriberData = {
+  firstname: string;
+  surname: string;
+  othernames: string;
+  user: {
+    email: string;
+  };
+  date_of_birth: string;
+  nationality: string;
+  phone: string;
+  title: string;
+  residential_address: string;
+  marital_status: string;
+  occupation: string;
+  place_of_work: string;
+  office_address: string;
+  number_of_unit_applied: number;
+  how_you_heard: string;
+  next_of_kin: string;
+  relationship: string;
+  status: string;
+  preferred_payment_option: string;
+  subscriberAttachment: SubscriberAttachment[];
+  subscriberProject: SubscriberProject[];
+};
+
