@@ -24,7 +24,7 @@ const subscriberColumns = (handleOpenModal: (id: string, type: string) => void) 
         />
         <IconButton
           iconName="edit"
-          onClick={() => handleOpenModal(row.original.id, 'editProject')}
+          onClick={() => handleOpenModal(row.original.id, 'editSubscriber')}
         />
         <IconButton
           iconName="add"

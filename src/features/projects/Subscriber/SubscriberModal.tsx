@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal as MuiModal, Box, Typography } from '@mui/material';
 import ViewDetails from './ModalType/ViewDetails';
 import CreateSubDetails from './ModalType/CreateSubDetails';
+import CreateDetails from './ModalType/CreateDetails';
 
 
 interface ModalProps {
@@ -42,7 +43,7 @@ const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
         {/* Add additional modal content based on the type */}
         {/* {type === 'add' && <AddEmployees />} */}
         {type === 'subscriberDetails' && <ViewDetails />}
-        {/* {type === 'editProject' && <CreateSubDetails id={employeeId} /> } */}
+        {type === 'editSubscriber' && <CreateDetails id={employeeId} /> }
         {type === 'addSubDetails' && <CreateSubDetails id={employeeId}/>}
         {/* <Button
           onClick={onClose}
