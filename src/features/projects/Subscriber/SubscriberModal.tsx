@@ -3,6 +3,7 @@ import { Modal as MuiModal, Box, Typography } from '@mui/material';
 import ViewDetails from './ModalType/ViewDetails';
 import CreateSubDetails from './ModalType/CreateSubDetails';
 import CreateDetails from './ModalType/CreateDetails';
+import GiveInvestment from './ModalType/GiveInvestment';
 
 
 interface ModalProps {
@@ -34,9 +35,9 @@ const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
       aria-describedby="modal-description"
     >
       <Box sx={style}>
-        <Typography id="modal-title" variant="h6" component="h2" fontWeight="bold" gutterBottom>
+        {/* <Typography id="modal-title" variant="h6" component="h2" fontWeight="bold" gutterBottom>
           Modal for {type}
-        </Typography>
+        </Typography> */}
         {/* <Typography id="modal-description" variant="body1" gutterBottom>
           Employee ID: {employeeId}
         </Typography> */}
@@ -45,6 +46,7 @@ const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
         {type === 'subscriberDetails' && <ViewDetails />}
         {type === 'editSubscriber' && <CreateDetails id={employeeId} /> }
         {type === 'addSubDetails' && <CreateSubDetails id={employeeId}/>}
+        {type === 'giveInvestment' && <GiveInvestment id={employeeId}/>}
         {/* <Button
           onClick={onClose}
           variant="contained"

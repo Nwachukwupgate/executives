@@ -3,6 +3,7 @@ import CenterOnLgScreen from "@/common/utilities/CenterLgScreen";
 import RolesPage from "@/features/projects/Create/RolesPage";
 import DeptPage from "@/features/projects/Create/DeptPage";
 import MatPage from "@/features/projects/Create/MatPage";
+import InvestmentPage from "@/features/projects/Create/InvestmentPage";
 
 interface Tab {
   id: string;
@@ -14,6 +15,7 @@ const TABS: Tab[] = [
   { id: "tab1", label: "Roles", component: <RolesPage /> },
   { id: "tab2", label: "Department", component: <DeptPage /> },
   { id: "tab3", label: "Materials", component: <MatPage /> },
+  { id: "tab4", label: "Investment", component: <InvestmentPage /> },
 ];
 
 type ContractorsProps = {};

@@ -1,4 +1,4 @@
-import Download from "@/common/icons/pack/Download";
+import { Button } from "@mui/material";
 import EditIcon from "@/common/icons/pack/EditIcon";
 import FilterIcon from "@/common/icons/pack/FilterIcon";
 import SelectTable from "@/common/table/CheckBoxTable";
@@ -8,40 +8,43 @@ import TablePagination from "@/common/table/TablePagination";
 import AppMenuWrapper from "@/common/utilities/AppMenuWrapper";
 import { useState } from "react";
 import supplierColumns from "./column/supplier.colum";
+import CreateSupplier from "./Supplier/CreateSupplier";
 
 const data: supplierType[] = [
   {
-    balance: "$1000",
-    depositedAmount: "$800",
-    fullName: "John Goodnews Osonwa",
     id: "SUP1234",
-    materialName: "Electricsl fittings",
-    orderDate: "",
-    totalPrice: "$800",
+    name: "John Goodnews Osonwa",
+    address: "123 Supplier Street",
+    email: "john.osonwa@example.com",
+    phoneNumber: "123-456-7890",
+    material: ["Electrical fittings", "Cables"],
+    orderDate: new Date().toISOString(),
   },
   {
-    balance: "$1000",
-    depositedAmount: "$800",
-    fullName: "John Goodnews Osonwa",
-    id: "SUP1234",
-    materialName: "Electricsl fittings",
-    orderDate: "",
-    totalPrice: "$800",
+    id: "SUP5678",
+    name: "Jane Doe",
+    address: "456 Supplier Avenue",
+    email: "jane.doe@example.com",
+    phoneNumber: "987-654-3210",
+    material: ["Wood", "Nails"],
+    orderDate: new Date().toISOString(),
   },
   {
-    balance: "$1000",
-    depositedAmount: "$800",
-    fullName: "John Goodnews Osonwa",
-    id: "SUP1234",
-    materialName: "Electricsl fittings",
-    orderDate: "",
-    totalPrice: "$800",
-  },
+    id: "SUP91011",
+    name: "Supplier Three",
+    address: "789 Supplier Road",
+    email: "supplier.three@example.com",
+    phoneNumber: "555-123-4567",
+    material: ["Concrete", "Steel"],
+    orderDate: new Date().toISOString(),
+  }
 ];
 
 type SupplierProps = {};
 const SupplierList: React.FC<SupplierProps> = ({}) => {
   const [selected, setSelected] = useState({});
+  const [isCreateSupplierModalOpen, setIsCreateSupplierModalOpen] = useState(false); 
+
 
   const columns = supplierColumns();
   return (
@@ -73,7 +76,13 @@ const SupplierList: React.FC<SupplierProps> = ({}) => {
         </div>
 
         <div className="flex items-center gap-4 justify-between ">
-          <Download />
+          <Button
+            className="font-bold w-40"
+            color="secondary"
+            onClick={() => setIsCreateSupplierModalOpen(true)} // Open Create Employee modal
+          >
+            Create Supplier
+          </Button>
         </div>
       </div>
       <div className="pt-10">
@@ -93,6 +102,12 @@ const SupplierList: React.FC<SupplierProps> = ({}) => {
           onChange={() => null}
         />
       </PaginationWrapper>
+
+      {isCreateSupplierModalOpen && (
+          <CreateSupplier 
+            onClose={() => setIsCreateSupplierModalOpen(false)} 
+          />
+      )}
     </div>
   );
 };

@@ -7,6 +7,8 @@ import ProjectVideos from "./DetailComponents/ProjectVideos";
 import ProjectAmenities from "./DetailComponents/ProjectAmenities";
 import ProjectLandmarks from "./DetailComponents/ProjectLandmarks";
 import FloorUnit from "./DetailComponents/FloorUnit";
+import { Typography } from "@mui/material";
+
 
 const ViewDetails: React.FC = () => {
   const [modals, setModals] = useState<ModalState>({
@@ -20,6 +22,8 @@ const ViewDetails: React.FC = () => {
     selectedUnit: null,
   });
 
+  console.log("modal", modals)
+
   const handleModalToggle = (key: keyof ModalState, value: boolean, data: ProjectUnit | null = null) => {
     setModals((prev) => ({ ...prev, [key]: value, selectedUnit: data }));
   };
@@ -30,6 +34,10 @@ const ViewDetails: React.FC = () => {
 
   return (
     <div className="container mx-auto p-6">
+        <Typography variant="h6" textAlign="left" fontWeight="bold" mb={2}>
+            Project Details
+        </Typography>
+
         <ProjectDetails data={projectData} />
           <ProjectPhotos photos={projectData.project_photos} />
           {/* <ProjectUnits

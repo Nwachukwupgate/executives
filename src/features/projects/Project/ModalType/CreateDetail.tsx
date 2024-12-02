@@ -4,6 +4,7 @@ import CreateProjectAmenities from "./CreateDetailComponent/CreateProjectAmeniti
 import CreateProjectVideos from "./CreateDetailComponent/CreateProjectVideos";
 import CreateProjectLandmark from "./CreateDetailComponent/CreateProjectLandmark";
 import CreateProjectFloorPlan from "./CreateDetailComponent/CreateProjectFloorPlan";
+import { Typography } from "@mui/material";
 
 
 interface CreateDetailsProps {
@@ -18,6 +19,9 @@ const CreateDetail: React.FC<CreateDetailsProps> = ({ id }) => {
   };
   return (
     <>
+        <Typography variant="h6" textAlign="left" fontWeight="bold" mb={2}>
+            Create Project Details
+        </Typography>
         <CreateProjectPhoto id={id} handleAccordionToggle={handleAccordionToggle} accordion={accordion} />
         <CreateProjectAmenities id={id} handleAccordionToggle={handleAccordionToggle} accordion={accordion} />
         <CreateProjectVideos id={id} handleAccordionToggle={handleAccordionToggle} accordion={accordion} />

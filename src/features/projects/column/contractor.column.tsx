@@ -3,25 +3,25 @@ import { createColumnHelper } from "@tanstack/react-table";
 const columnsHelper = createColumnHelper<contractType>();
 const contractorColumn = () => [
   columnsHelper.accessor("id", {
-    header: () => <>Contract ID</>,
+    header: () => <>Contractor ID</>,
   }),
-  columnsHelper.accessor("name", {
+  columnsHelper.accessor("nameOfPrincipal", {
     header: () => <>Principal Name</>,
   }),
-  columnsHelper.accessor("duration", {
-    header: () => <>Contract Durastion</>,
+  columnsHelper.accessor("nameOfCompany", {
+    header: () => <>Company Name</>,
   }),
-  columnsHelper.accessor("remark", {
-    header: () => <>Remark</>,
+  columnsHelper.accessor("contractorServiceLine", {
+    header: () => <>Service Line</>,
   }),
-  columnsHelper.accessor("task", {
-    header: () => <>Contract Task</>,
+  columnsHelper.accessor("contractorAddress", {
+    header: () => <>Address</>,
   }),
-  columnsHelper.accessor("amount", {
-    header: () => <>Amount</>,
+  columnsHelper.accessor("email", {
+    header: () => <>Email</>,
   }),
-  columnsHelper.accessor("address", {
-    header: () => <>Project Address</>,
+  columnsHelper.accessor("phone", {
+    header: () => <>Phone</>,
   }),
 ];
 

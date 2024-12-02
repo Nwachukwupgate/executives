@@ -14,12 +14,12 @@ type projectType = {
 
 type contractType = {
   id: string;
-  name: string;
-  duration: string;
-  remark: string;
-  task: string;
-  amount: string;
-  address: string;
+  contractorAddress: string;
+  contractorServiceLine: string;
+  email: string;
+  nameOfCompany: string;
+  nameOfPrincipal: string;
+  phone: string;
 };
 
 type storeKeeperType = {
@@ -32,12 +32,12 @@ type storeKeeperType = {
 
 type supplierType = {
   id: string;
-  fullName: string;
-  orderDate: string;
-  materialName: string;
-  totalPrice: string;
-  depositedAmount: string;
-  balance: string;
+  name: string;
+  address: string;
+  email: string;
+  phoneNumber: string;
+  material: string[];
+  orderDate?: string;
 };
 
 type reportType = {

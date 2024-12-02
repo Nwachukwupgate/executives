@@ -35,13 +35,18 @@ const normalBar: {
   },
   {
     icon: "WalletOutline",
-    text: "Supplier Payment",
+    text: "Supplier",
     link: routes.parentRoutes.SUPPLIER_PAYMENT,
   },
   {
     icon: "ThreeUsers",
     text: "Subscribers",
     link: routes.parentRoutes.SUBSCRIBER,
+  },
+  {
+    icon: "ManWithTie",
+    text: "Contractor",
+    link: routes.parentRoutes.Contractor,
   },
   {
     icon: "ReportOutline",

@@ -33,9 +33,9 @@ const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
       aria-describedby="modal-description"
     >
       <Box sx={style}>
-        <Typography id="modal-title" variant="h6" component="h2" fontWeight="bold" gutterBottom>
+        {/* <Typography id="modal-title" variant="h6" component="h2" fontWeight="bold" gutterBottom>
           Modal for {type}
-        </Typography>
+        </Typography> */}
         {/* <Typography id="modal-description" variant="body1" gutterBottom>
           Employee ID: {employeeId}
         </Typography> */}

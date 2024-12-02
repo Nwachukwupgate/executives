@@ -9,40 +9,42 @@ import AppMenuWrapper from "@/common/utilities/AppMenuWrapper";
 import { Button } from "@mui/material";
 import { useState } from "react";
 import contractorColumn from "./column/contractor.column";
+import CreateContractor from "./Contractor/CreateContractor";
 
 const data: contractType[] = [
   {
-    address: "30 Waltetr carrignton",
-    amount: "2500",
-    duration: "One month",
-    id: "some id",
-    name: "foo",
-    remark: "excellent job",
-    task: "tasks easy",
+    id: "CTR001",
+    contractorAddress: "123 Main Street, Springfield",
+    contractorServiceLine: "Electrical",
+    email: "contractor1@example.com",
+    nameOfCompany: "Springfield Electrical Ltd.",
+    nameOfPrincipal: "John Doe",
+    phone: "+1234567890",
   },
   {
-    address: "30 Waltetr carrignton",
-    amount: "2500",
-    duration: "One month",
-    id: "some id",
-    name: "foo",
-    remark: "excellent job",
-    task: "tasks easy",
+    id: "CTR002",
+    contractorAddress: "456 Elm Street, Metropolis",
+    contractorServiceLine: "Plumbing",
+    email: "contractor2@example.com",
+    nameOfCompany: "Metropolis Plumbing Co.",
+    nameOfPrincipal: "Jane Smith",
+    phone: "+9876543210",
   },
   {
-    address: "30 Waltetr carrignton",
-    amount: "2500",
-    duration: "One month",
-    id: "some id",
-    name: "foo",
-    remark: "excellent job",
-    task: "tasks easy",
+    id: "CTR003",
+    contractorAddress: "789 Oak Street, Gotham",
+    contractorServiceLine: "Construction",
+    email: "contractor3@example.com",
+    nameOfCompany: "Gotham Builders",
+    nameOfPrincipal: "Bruce Wayne",
+    phone: "+1928374650",
   },
 ];
 
 type ContractorProps = {};
 const ContractorList: React.FC<ContractorProps> = ({}) => {
   const [selected, setSelected] = useState({});
+  const [isCreateContractorModalOpen, setIsCreateContractorModalOpen] = useState(false); 
 
   const columns = contractorColumn();
   return (
@@ -74,8 +76,8 @@ const ContractorList: React.FC<ContractorProps> = ({}) => {
         </div>
 
         <div className="flex items-center gap-4 justify-between ">
-          <Button className="font-bold w-40" color="secondary">
-            Create Contract
+          <Button className="font-bold w-40" color="secondary" onClick={() => setIsCreateContractorModalOpen(true)}>
+            Create Contractor
           </Button>
           <Download />
         </div>
@@ -97,6 +99,12 @@ const ContractorList: React.FC<ContractorProps> = ({}) => {
           onChange={() => null}
         />
       </PaginationWrapper>
+
+      {isCreateContractorModalOpen && (
+          <CreateContractor 
+            onClose={() => setIsCreateContractorModalOpen(false)} 
+          />
+      )}
     </div>
   );
 };

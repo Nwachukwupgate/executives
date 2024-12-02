@@ -26,6 +26,7 @@ const SupplierPaymentPage = lazy(
 const SubscriberPage = lazy(() => import("@/pages/project/Subscriber"));
 const ReportPage = lazy(() => import("@/pages/project/Report"));
 const EmployeePage = lazy(() => import("@/pages/project/Employee"));
+const ContractorPage = lazy(() => import("@/pages/project/Contractor"));
 
 
 const protectedRoutes: ExtendedRouteObject[] = [
@@ -68,6 +69,10 @@ const protectedRoutes: ExtendedRouteObject[] = [
       {
         path: routes.parentRoutes.REPORT,
         element: <ReportPage />,
+      },
+      {
+        path: routes.parentRoutes.Contractor,
+        element: <ContractorPage />,
       },
     ],
   },
