@@ -43,7 +43,7 @@ const AddressReport: React.FC<CreateDetailsProps> = ({ id }) => {
       {/* Icon and Title */}
       <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
         <Typography variant="h6" fontWeight="bold">
-          Accept Request
+          Make Remarks
         </Typography>
       </Box>
       
