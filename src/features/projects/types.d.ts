@@ -41,12 +41,14 @@ type supplierType = {
 };
 
 type reportType = {
+  id: string;
   weeklyEngagement: string;
   achievement: string;
   challenges: string;
   comment: string;
   grade: string;
   suggestion: string;
+  actions?: any;
 };
 
 type employeeType = {
@@ -72,3 +74,21 @@ type subscriberType = {
   phone: string;
   actions?: any;
 };
+
+interface requestType {
+  id: string;
+  item: string;
+  quantity: string;
+  unit_price: string;
+  account_name: string;
+  account_number: string;
+  bank_name: string;
+  description: string;
+  hod_status: string;
+  cfo_status: string;
+  coo_status: string;
+  md_status: string;
+  account_status: string;
+  message: string;
+  actions?: any;
+}

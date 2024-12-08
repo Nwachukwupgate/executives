@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Card, Typography, Box, CircularProgress, IconButton } from '@mui/material';
+import { Button, Card, Typography, Box, IconButton } from '@mui/material';
 import { Edit, Delete } from '@mui/icons-material';
 import RoleModal from './modals/RoleModal';
 import EditRoleModal from './modals/EditRoleModal';

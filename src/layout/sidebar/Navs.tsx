@@ -49,6 +49,11 @@ const normalBar: {
     link: routes.parentRoutes.Contractor,
   },
   {
+    icon: "PaperPlaneIcon",
+    text: "Request",
+    link: routes.parentRoutes.Request,
+  },
+  {
     icon: "ReportOutline",
     text: "Report",
     link: routes.parentRoutes.REPORT,

@@ -45,8 +45,9 @@ const EditRoleModal: React.FC<EditRoleModalProps> = ({ role, onClose, onEditRole
     // onEditRole(prevRoles =>
     //   prevRoles.map((r: any) => (r.id === role.id ? { ...r, ...data } : r))
     // );
-    // reset();
-    // onClose();
+    onEditRole(console.log(data));
+    reset();
+    onClose();
   };
 
   return (

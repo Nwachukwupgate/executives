@@ -11,7 +11,8 @@ export const parentRoutes = Object.freeze({
   SUPPLIER_PAYMENT: "/supplier-payment",
   REPORT: "/report",
   Employee: "/employee",
-  Contractor: "/contractor"
+  Contractor: "/contractor",
+  Request: "/request"
 });
 
 export default Object.freeze({

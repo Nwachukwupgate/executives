@@ -1,7 +1,7 @@
 import React from "react";
 
 interface IconButtonProps {
-  iconName: "details" | "edit" | "add" | "investment"; 
+  iconName: "details" | "edit" | "add" | "investment" | "approve" | "reject";
   onClick: () => void;
 }
 
@@ -10,7 +10,6 @@ const IconButton: React.FC<IconButtonProps> = ({ iconName, onClick }) => {
     details: (
       <svg
         className="h-5 w-5 text-[#0A3347] cursor-pointer"
-        onClick={onClick}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
@@ -21,7 +20,6 @@ const IconButton: React.FC<IconButtonProps> = ({ iconName, onClick }) => {
     edit: (
       <svg
         className="h-5 w-5 text-[#0A3347] cursor-pointer"
-        onClick={onClick}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
@@ -32,7 +30,6 @@ const IconButton: React.FC<IconButtonProps> = ({ iconName, onClick }) => {
     add: (
       <svg
         className="h-5 w-5 text-[#0A3347] cursor-pointer"
-        onClick={onClick}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
@@ -43,7 +40,6 @@ const IconButton: React.FC<IconButtonProps> = ({ iconName, onClick }) => {
     investment: (
       <svg
         className="h-5 w-5 text-[#0A3347] cursor-pointer"
-        onClick={onClick}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
@@ -51,7 +47,27 @@ const IconButton: React.FC<IconButtonProps> = ({ iconName, onClick }) => {
         <path d="M12 2a1 1 0 011 1v1.293c3.872.512 7 3.862 7 7.707 0 4.418-3.582 8-8 8s-8-3.582-8-8c0-3.845 3.128-7.195 7-7.707V3a1 1 0 112 0v1.293C10.772 4.783 8 7.893 8 12c0 2.206 1.794 4 4 4s4-1.794 4-4c0-4.107-2.772-7.217-6-7.707V3a1 1 0 01-1-1zm0 14a2 2 0 100-4 2 2 0 000 4z" />
         <path d="M16.707 8.293a1 1 0 00-1.414 0L12 11.586 8.707 8.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l4-4a1 1 0 000-1.414z" />
       </svg>
-    )
+    ),
+    approve: (
+      <svg
+        className="h-5 w-5 text-green-500 cursor-pointer"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M10 17.5L5.5 13l-1.41 1.42L10 20.33l10-10-1.41-1.41z" />
+      </svg>
+    ),
+    reject: (
+      <svg
+        className="h-5 w-5 text-red-500 cursor-pointer"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M6.225 4.811l1.415-1.415L12 7.755l4.36-4.36 1.415 1.415-4.36 4.36 4.36 4.36-1.415 1.415L12 10.585l-4.36 4.36-1.415-1.415 4.36-4.36z" />
+      </svg>
+    ),
   };
 
   return <button onClick={onClick}>{icons[iconName]}</button>;

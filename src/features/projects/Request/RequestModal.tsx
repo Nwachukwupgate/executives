@@ -1,8 +1,8 @@
 import React from 'react';
 import { Modal as MuiModal, Box } from '@mui/material';
-import ViewDetails from './ModalType/ViewDetails';
-import CreateDetail from './ModalType/CreateDetail';
-
+import AcceptRequest from './ModalType/AcceptRequest';
+import RejectRequest from './ModalType/RejectRequest';
+import ViewRequest from './ModalType/ViewRequest';
 
 interface ModalProps {
   type: string;
@@ -40,10 +40,11 @@ const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
           Employee ID: {employeeId}
         </Typography> */}
         {/* Add additional modal content based on the type */}
-        {/* {type === 'add' && <AddEmployees />} */}
-        {type === 'projectDetails' && <ViewDetails />}
-        {type === 'editProject' && <CreateDetail id={employeeId} /> }
-        {/* {type === 'edit' && <CreateDetail id={employeeId}/>} */}
+        {type === 'view' && <ViewRequest />}
+        {type === 'approve' && <AcceptRequest id={employeeId} />}
+        {type === 'reject' && <RejectRequest id={employeeId} /> }
+        {/* {type === 'addSubDetails' && <CreateSubDetails id={employeeId}/>}
+        {type === 'giveInvestment' && <GiveInvestment id={employeeId}/>} */}
         {/* <Button
           onClick={onClose}
           variant="contained"

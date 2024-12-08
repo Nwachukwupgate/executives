@@ -2,9 +2,9 @@ import moment from "moment";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import 'swiper/swiper-bundle.css';
+// import 'swiper/pagination';
+// import 'swiper/scrollbar.scss';
 
 interface EmployeeProfileProps {
   employee: any;  

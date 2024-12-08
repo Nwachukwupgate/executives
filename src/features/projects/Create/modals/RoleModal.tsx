@@ -30,7 +30,8 @@ const RoleModal: React.FC<RoleModalProps> = ({ onClose, onAddRole }) => {
     console.log(data)
     // const newRole = { ...data, id: String(Date.now()) };
     // onAddRole(prev => [...prev, newRole]);
-    // reset();
+    onAddRole(console.log(data))
+    reset();
     // onClose();
   };
 

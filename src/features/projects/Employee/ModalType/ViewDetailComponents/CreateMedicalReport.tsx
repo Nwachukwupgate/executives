@@ -43,6 +43,7 @@ const CreateMedicalReport: React.FC<CreateDetailsProps> = ({ id, handleAccordion
     };
 
     const onSubmit = (data: FormValues) => {
+      console.log(id)
         console.log("Submitted Data:", data);
     };
 

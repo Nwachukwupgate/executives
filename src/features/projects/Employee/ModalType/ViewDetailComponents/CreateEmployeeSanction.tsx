@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useForm, useFieldArray, useFormContext } from "react-hook-form";
+import { useForm, useFieldArray } from "react-hook-form";
 import Accordion from "@/common/form/Accordion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
@@ -36,6 +36,7 @@ const CreateEmployeeSanction: React.FC<CreateEmployeeSanctionProps> = ({ handleA
   const [sancLoad, setSancLoad] = useState(false);
 
   const onSubmit = (data: FormValues) => {
+    setSancLoad(false)
     console.log("Submitted Employee Sanction Data:", data);
   };
 

@@ -9,9 +9,21 @@ import AppMenuWrapper from "@/common/utilities/AppMenuWrapper";
 import { Button } from "@mui/material";
 import { useState } from "react";
 import reportColumns from "./column/report.column";
+import Modal from "./Report/ReportModal";
+import CreateReport from "./Report/CreateReport";
 
 const data: reportType[] = [
   {
+    id: "r1",
+    achievement: "Built North wall to completion",
+    challenges: "Weather change",
+    comment: "We should always check weather updates",
+    grade: "Satisfactory",
+    suggestion: "same as comment",
+    weeklyEngagement: "all",
+  },
+  {
+    id: "r2",
     achievement: "Built North wall to completion",
     challenges: "Weather change",
     comment: "We should always check weather updates",
@@ -24,8 +36,17 @@ const data: reportType[] = [
 type ReportProps = {};
 const ReportList: React.FC<ReportProps> = ({}) => {
   const [selected, setSelected] = useState({});
+  const [modalType, setModalType] = useState<string | null>(null);
+  const [reportId, setReportId] = useState<string | null>(null); 
+  const [isCreateReportModalOpen, setIsCreateReportModalOpen] = useState(false)
 
-  const columns = reportColumns();
+
+  const handleOpenModal = (id: string, type: string) => {
+    setReportId(id);
+    setModalType(type);
+  };
+
+  const columns = reportColumns(handleOpenModal);
   return (
     <div>
       <div className="flex w-ful flex-col xl:flex-row xl:items-center gap-4 py-4 xl:basis-1/2 xl:justify-between">
@@ -55,7 +76,7 @@ const ReportList: React.FC<ReportProps> = ({}) => {
         </div>
 
         <div className="flex items-center gap-4 justify-between ">
-          <Button color="secondary">Give Report</Button>
+          <Button color="secondary" onClick={() => setIsCreateReportModalOpen(true)}>Give Report</Button>
           <Download />
         </div>
       </div>
@@ -76,6 +97,23 @@ const ReportList: React.FC<ReportProps> = ({}) => {
           onChange={() => null}
         />
       </PaginationWrapper>
+
+      {isCreateReportModalOpen && (
+          <CreateReport 
+            onClose={() => setIsCreateReportModalOpen(false)} 
+          />
+      )}
+
+      {modalType && reportId && (
+          <Modal
+            type={modalType}
+            employeeId={reportId}
+            onClose={() => {
+              setModalType(null);
+              setReportId(null);
+            }}
+          />
+        )}
     </div>
   );
 };

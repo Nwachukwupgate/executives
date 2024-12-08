@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal as MuiModal, Box, Typography } from '@mui/material';
+import { Modal as MuiModal, Box } from '@mui/material';
 import ViewDetails from './ModalType/ViewDetails';
 import CreateSubDetails from './ModalType/CreateSubDetails';
 import CreateDetails from './ModalType/CreateDetails';
