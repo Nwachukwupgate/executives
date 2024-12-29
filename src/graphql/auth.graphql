@@ -1,0 +1,32 @@
+mutation login($data: LoginUserInput!) {
+  loginUser(data: $data) {
+    ... on AuthIctResponse {
+      message
+      user {
+        _id
+        email
+        firstName
+        lastName
+        referralCode
+        salary
+        resumptionDate
+        sex
+        maritalStatus
+        street
+        city
+        state
+        phone
+        nationality
+        stateOfOrigin
+        lgaOfOrigin
+        photo
+        createdAt
+        updatedAt
+      }
+      token
+    }
+    ... on invalidInputError {
+      message
+    }
+  }
+}

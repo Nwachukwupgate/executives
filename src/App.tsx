@@ -1,7 +1,9 @@
+import { ApolloProvider } from "@apollo/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Suspense } from "react";
 import { Toaster } from "sonner";
 import WelcomeLoader from "./common/loaders/WelcomeLoader";
+import { client } from "./lib/apollo-config";
 import AppRouter from "./navigation";
 import AppThemeProvider from "./theme/AppThemeProvider";
 
@@ -15,15 +17,17 @@ const queryClient = new QueryClient({
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <AppThemeProvider>
-        <Suspense fallback={<WelcomeLoader />}>
-          <AppRouter />
-        </Suspense>
-      </AppThemeProvider>
-      <Toaster richColors position="top-right" theme="light" />
-      {/* <AppModals /> */}
-    </QueryClientProvider>
+    <ApolloProvider client={client}>
+        <QueryClientProvider client={queryClient}>
+        <AppThemeProvider>
+          <Suspense fallback={<WelcomeLoader />}>
+            <AppRouter />
+          </Suspense>
+        </AppThemeProvider>
+        <Toaster richColors position="top-right" theme="light" />
+        {/* <AppModals /> */}
+      </QueryClientProvider>
+    </ApolloProvider>
   );
 }
 

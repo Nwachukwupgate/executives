@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-import-module-exports
 import { CodegenConfig } from "@graphql-codegen/cli";
 
 console.log(
@@ -8,7 +7,7 @@ console.log(
 
 const Config: CodegenConfig = {
   overwrite: true,
-  schema: process.env.VITE_APP_BACKEND_SCHEMA_URL,
+  schema: "https://ghm-server.vercel.app/graphql", // use import.meta.env for Vite
   documents: ["./src/graphql/**/*.graphql"],
   generates: {
     "src/generated/graphql.tsx": {
@@ -21,4 +20,4 @@ const Config: CodegenConfig = {
   },
 };
 
-module.exports = Config;
+export default Config;
