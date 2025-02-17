@@ -1,4 +1,3 @@
-import dummy from "@/assets/image/profilesmall.png";
 import AngleRight from "@/common/icons/pack/AngleRight";
 import { useAppStore } from "@/store";
 

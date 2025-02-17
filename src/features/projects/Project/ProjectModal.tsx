@@ -24,6 +24,7 @@ const style = {
 };
 
 const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
+  console.log("Modal type", employeeId)
   return (
     <MuiModal
       open={true}

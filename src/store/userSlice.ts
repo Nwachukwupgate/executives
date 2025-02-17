@@ -1,4 +1,4 @@
-import { ICT } from "@/generated/graphql";
+import { Ict } from "@/generated/graphql";
 import { StateCreator } from "zustand";
 import { appStoreType, mutationType, userStore } from "./stores";
 
@@ -9,7 +9,7 @@ const createUserSlice: StateCreator<
   userStore
 > = (set) => ({
   user: null,
-  setUserData: (user: ICT | null) => set(() => ({ user })),
+  setUserData: (user: Ict | null) => set(() => ({ user })),
 });
 
 export default createUserSlice;
