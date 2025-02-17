@@ -15,9 +15,10 @@ interface FormValues {
 interface CreateEmployeeSanctionProps {
   handleAccordionToggle: (section: string) => void;
   accordion: string;
+  id: string;
 }
 
-const CreateEmployeeSanction: React.FC<CreateEmployeeSanctionProps> = ({ handleAccordionToggle, accordion }) => {
+const CreateEmployeeSanction: React.FC<CreateEmployeeSanctionProps> = ({ handleAccordionToggle, accordion, id }) => {
   const { control, handleSubmit, setValue } = useForm<FormValues>({
     defaultValues: {
       sanctions: [
@@ -37,7 +38,7 @@ const CreateEmployeeSanction: React.FC<CreateEmployeeSanctionProps> = ({ handleA
 
   const onSubmit = (data: FormValues) => {
     setSancLoad(false)
-    console.log("Submitted Employee Sanction Data:", data);
+    console.log("Submitted Employee Sanction Data:", data, id);
   };
 
   return (

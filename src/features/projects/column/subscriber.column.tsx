@@ -26,10 +26,10 @@ const subscriberColumns = (handleOpenModal: (id: string, type: string) => void) 
           iconName="edit"
           onClick={() => handleOpenModal(row.original.id, 'editSubscriber')}
         />
-        <IconButton
+        {/* <IconButton
           iconName="add"
           onClick={() => handleOpenModal(row.original.id, 'addSubDetails')}
-        />
+        /> */}
         <IconButton
           iconName="investment"
           onClick={() => handleOpenModal(row.original.id, 'giveInvestment')}

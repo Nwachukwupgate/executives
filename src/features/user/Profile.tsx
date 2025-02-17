@@ -1,10 +1,13 @@
 import img from "@/assets/image/estatehouseview.jpeg";
-import profile from "@/assets/image/profile1.jpeg";
 import OutlineCamera from "@/common/icons/pack/OutlineCamera";
 import { Button, Typography } from "@mui/material";
+import { useAppStore } from "@/store";
 
 type ProfileProps = {};
 const Profile: React.FC<ProfileProps> = ({}) => {
+
+  const user = useAppStore((state) => state.user);
+
   return (
     <div className="w-full">
       <div className="rounded-lg mx-auto bg-white max-w-[700px] lg:max-w-[100ch]">
@@ -30,7 +33,7 @@ const Profile: React.FC<ProfileProps> = ({}) => {
           <div className="absolute -top-[86px] md:-top-[120%] left-2 md:left-8">
             <div className="rounded-full bg-[#FFFFFF] w-28 h-28 md:w-32 md:h-32 overflow-hidden  p-1">
               <img
-                src={profile}
+                src={user?.photo}
                 className="w-full rounded-full h-full object-cover"
                 alt="profile"
               />
@@ -40,8 +43,8 @@ const Profile: React.FC<ProfileProps> = ({}) => {
             </div>
           </div>
           <div className="pt-8 pb-2 md:py-1">
-            <h2 className="font-Roobert capitalize">lorem me</h2>
-            <p>ICT Manager</p>
+            <h2 className="font-Roobert capitalize">{user?.firstName + " " + user?.lastName}</h2>
+            {/* <p>{user?.__typename}</p> */}<p>MD/COO/CFO</p>
           </div>
         </div>
 

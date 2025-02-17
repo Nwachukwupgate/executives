@@ -6,8 +6,8 @@ type navStore = {
 };
 
 type userStore = {
-  user: Subscriber | null;
-  setUserData: (data: Subscriber | null) => void;
+  user: Ict | null;
+  setUserData: (data: Ict | null) => void;
 };
 
 interface authStore {

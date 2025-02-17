@@ -1,7 +1,6 @@
 import React from 'react';
 import { Modal as MuiModal, Box } from '@mui/material';
 import ViewDetails from './ModalType/ViewDetails';
-import CreateDetail from './ModalType/CreateDetail';
 
 
 interface ModalProps {
@@ -19,8 +18,8 @@ const style = {
   borderRadius: 2,
   boxShadow: 24,
   p: 4,
-  minWidth: 800,
-  maxHeight: '88vh', // Limit the modal's height
+  minWidth: 900,
+  maxHeight: '95vh', // Limit the modal's height
   overflowY: 'auto', 
 };
 
@@ -42,7 +41,7 @@ const Modal: React.FC<ModalProps> = ({ type, employeeId, onClose }) => {
         {/* Add additional modal content based on the type */}
         {/* {type === 'add' && <AddEmployees />} */}
         {type === 'projectDetails' && <ViewDetails />}
-        {type === 'editProject' && <CreateDetail id={employeeId} /> }
+        {/* {type === 'editProject' && <CreateDetail id={employeeId} /> } */}
         {/* {type === 'edit' && <CreateDetail id={employeeId}/>} */}
         {/* <Button
           onClick={onClose}

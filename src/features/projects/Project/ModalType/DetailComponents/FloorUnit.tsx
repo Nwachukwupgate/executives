@@ -45,6 +45,7 @@ const FloorUnit: React.FC<{ floorUnits: FloorUnitProps[] }> = ({ floorUnits }) =
               style={{
                 maxHeight: "70vh",
                 overflowY: "auto",
+                width: "40vw"
               }}
             >
               <p>{selectedUnit?.additional_fee_component}</p>

@@ -6,7 +6,6 @@ import PaginationWrapper from "@/common/table/PaginationWrapper";
 import TableLimit from "@/common/table/TableLimit";
 import TablePagination from "@/common/table/TablePagination";
 import AppMenuWrapper from "@/common/utilities/AppMenuWrapper";
-import { Button } from "@mui/material";
 import { useState } from "react";
 import contractorColumn from "./column/contractor.column";
 import CreateContractor from "./Contractor/CreateContractor";
@@ -76,9 +75,9 @@ const ContractorList: React.FC<ContractorProps> = ({}) => {
         </div>
 
         <div className="flex items-center gap-4 justify-between ">
-          <Button className="font-bold w-40" color="secondary" onClick={() => setIsCreateContractorModalOpen(true)}>
+          {/* <Button className="font-bold w-40" color="secondary" onClick={() => setIsCreateContractorModalOpen(true)}>
             Create Contractor
-          </Button>
+          </Button> */}
           <Download />
         </div>
       </div>

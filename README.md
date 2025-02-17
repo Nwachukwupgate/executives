@@ -9,3 +9,4 @@
 - then you can run npm run dev
 
 for production build change VITE_APP_BACKEND_SCHEMA_URL to point to production graphql schema
+# executives

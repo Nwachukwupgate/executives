@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-import CreateNextOfKin from "./ViewDetailComponents/CreateNextOfKin";
-import CreateMedicalReport from "./ViewDetailComponents/CreateMedicalReport";
 import CreateEmployeeSanction from "./ViewDetailComponents/CreateEmployeeSanction";
 import CreateEmployeeSalary from "./ViewDetailComponents/CreateEmployeeSalary";
-import CreateEmploymentHistory from "./ViewDetailComponents/CreateEmploymentHistory";
-import CreateCareerDevelopment from "./ViewDetailComponents/CreateCareerDevelopment";
-import CreateAcademicRecord from "./ViewDetailComponents/CreateAcademicRecord";
 import { Typography } from "@mui/material";
 
 
@@ -24,13 +19,8 @@ const CreateDetail: React.FC<CreateDetailsProps> = ({ id }) => {
         <Typography variant="h6" textAlign="left" fontWeight="bold" mb={2}>
             Create Project Details
         </Typography>
-        <CreateMedicalReport id={id} handleAccordionToggle={handleAccordionToggle} accordion={accordion} />
-        <CreateNextOfKin handleAccordionToggle={handleAccordionToggle} accordion={accordion} />
-        <CreateEmployeeSanction handleAccordionToggle={handleAccordionToggle} accordion={accordion} />
+        <CreateEmployeeSanction id={id} handleAccordionToggle={handleAccordionToggle} accordion={accordion} />
         <CreateEmployeeSalary handleAccordionToggle={handleAccordionToggle} accordion={accordion} />
-        <CreateEmploymentHistory handleAccordionToggle={handleAccordionToggle} accordion={accordion} />
-        <CreateCareerDevelopment handleAccordionToggle={handleAccordionToggle} accordion={accordion} />
-        <CreateAcademicRecord handleAccordionToggle={handleAccordionToggle} accordion={accordion} />
     </>
   );
 };

@@ -33,10 +33,10 @@ const employeeColumns = (handleOpenModal: (id: string, type: string) => void) =>
           iconName="edit"
           onClick={() => handleOpenModal(row.original.id, 'edit')}
         />
-        <IconButton
+        {/* <IconButton
           iconName="add"
           onClick={() => handleOpenModal(row.original.id, 'add')}
-        />
+        /> */}
       </div>
     ),
   }),

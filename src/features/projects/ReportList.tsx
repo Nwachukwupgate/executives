@@ -6,7 +6,6 @@ import PaginationWrapper from "@/common/table/PaginationWrapper";
 import TableLimit from "@/common/table/TableLimit";
 import TablePagination from "@/common/table/TablePagination";
 import AppMenuWrapper from "@/common/utilities/AppMenuWrapper";
-import { Button } from "@mui/material";
 import { useState } from "react";
 import reportColumns from "./column/report.column";
 import Modal from "./Report/ReportModal";
@@ -76,7 +75,7 @@ const ReportList: React.FC<ReportProps> = ({}) => {
         </div>
 
         <div className="flex items-center gap-4 justify-between ">
-          <Button color="secondary" onClick={() => setIsCreateReportModalOpen(true)}>Give Report</Button>
+          {/* <Button color="secondary" onClick={() => setIsCreateReportModalOpen(true)}>Give Report</Button> */}
           <Download />
         </div>
       </div>

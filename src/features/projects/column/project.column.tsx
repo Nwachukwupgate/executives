@@ -28,10 +28,10 @@ const projectColumns = (handleOpenModal: (id: string, type: string) => void) => 
           iconName="details"
           onClick={() => handleOpenModal(row.original.id, 'projectDetails')}
         />
-        <IconButton
+        {/* <IconButton
           iconName="edit"
           onClick={() => handleOpenModal(row.original.id, 'editProject')}
-        />
+        /> */}
         {/* <IconButton
           iconName="add"
           onClick={() => handleOpenModal(row.original.id, 'addProject')}
