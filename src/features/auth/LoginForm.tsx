@@ -1,14 +1,13 @@
 import AppPasswordField from "@/common/form/mui/AppPasswordField";
 import AppTextField from "@/common/form/mui/AppTextField";
 import TwSpinner from "@/common/utilities/TwSpinner";
-import { LoginUserInput } from "@/generated/graphql";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 type LoginFormProps = {
-  handler: (data: LoginUserInput) => void;
+  handler: () => void;
   loading: boolean;
 };
 
